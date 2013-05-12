@@ -2,9 +2,15 @@ ColorApp::Application.routes.draw do
   get "home/index"
 
   resources :colors
-
-
+  
   devise_for :users
+
+  devise_scope :user do
+    get 'register', to: 'devise/registrations#new', as: :register
+    get 'login', to: 'devise/sessions#new', as: :login
+    get 'logout', to: 'devise/sessions#destroy', as: :logout
+    get 'edit_profile', to: 'devise/registrations#edit', as: :edit_profile
+  end
 
   root :to => "home#index"
   

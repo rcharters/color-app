@@ -1,10 +1,10 @@
-<div class="jumbotron masthead">
-	<div class="container">
-		<h1><%= Rails.application.class.parent_name %></h1>
-		<p>Welcome to the future of social color!</p>
-		<p>
-			<a class="btn btn-primary btn-large">Sign Up!</a>
-			<a class="btn btn-primary btn-large">Sign In!</a>
-		</p>
-	</div>
-</div><!-- jumbotron -->
+	 	<div class="hero-unit">
+	 		<div class="offset2">
+				<h1><%= Rails.application.class.parent_name %></h1>
+				<p>Welcome to a world of color!</p>
+				<p>
+					<%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+					<%= link_to "Log In!", new_user_session_path, class: "btn btn-info btn-large" %>
+				</p>
+			</div>
+		</div>
